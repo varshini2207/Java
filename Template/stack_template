@@ -1,0 +1,46 @@
+class stackg1<T> {
+    private Object[] arr;  // Use Object array
+    private int top;
+
+    stackg1() {
+        arr = new Object[10];  // Create an Object array
+        top = 0;
+    }
+
+    void push(T a) {
+        arr[top++] = a;  // Store the generic type in the Object array
+    }
+
+    @SuppressWarnings("unchecked")  // Suppress warning for casting
+    T pop() {
+        T b = (T) arr[--top];  // Cast back to T while popping
+        return b;
+    }
+
+    void peek() {
+        if (top > 0) { // Check if stack is not empty before peeking
+            System.out.println(arr[top - 1]);  // Use top - 1 for the current top element
+        } else {
+            System.out.println("Stack is empty");
+        }
+    }
+
+    void isempty() {
+        if (top <= 0) {
+            System.out.println("Empty");
+        } else {
+            System.out.println("Not Empty");
+        }
+    }
+}
+
+class stack2 {
+    public static void main(String args[]) {
+        stackg1<Integer> s = new stackg1<>();
+        s.push(10);
+        s.push(20);
+        System.out.println("Popped: " + s.pop());
+        s.peek();
+        s.isempty();
+    }
+}
