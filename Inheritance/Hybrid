@@ -1,0 +1,22 @@
+public class Hybrid
+{
+   public static void main(String args[])
+      {
+         gd g=new gd();
+         System.out.println(g.gender);
+      }
+}
+class father
+{
+   char gender='m';
+}
+class son extends father{ char gender='m';}
+class daughter extends father{ char gender='f';}
+class gd extends daughter
+{
+   char gender='f';
+   public void print()
+   {
+      System.out.println("Grand daughter class");
+   }
+}
