@@ -1,0 +1,11 @@
+public class Const
+  {
+    public static final double CM_PER_INCH=2.54;
+    public static void main(String args[])
+     {
+        final double CM_PER_INCH=2.54;
+        double pw=8.5;
+        double ph=11;
+         System.out.println("Paper size in centimeter: "+pw*CM_PER_INCH+" by "+CM_PER_INCH*ph);
+     }
+  }
