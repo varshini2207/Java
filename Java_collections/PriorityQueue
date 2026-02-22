@@ -1,0 +1,13 @@
+import java.util.Queue;
+import java.util.PriorityQueue;
+class pqueue
+{
+   public static void main(String args[])
+   {
+      Queue<String>pq=new PriorityQueue<>();
+      pq.add("Hai");
+      pq.add("Ball");
+      pq.add("World");
+      System.out.println(pq);
+   }
+}
