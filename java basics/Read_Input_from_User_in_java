@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+class User{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Enter the Integer value");
+        int a = input.nextInt();
+        input.nextLine(); // Consume the leftover newline character
+
+        System.out.println("Enter the Float value");
+        float b = input.nextFloat();
+        input.nextLine(); // Consume the leftover newline character
+
+        System.out.println("Enter the String");
+        String userInput = input.nextLine(); // This will now work correctly
+
+        System.out.println("Enter another String with .next():");
+        String d = input.next(); // This reads a single word
+        input.nextLine();
+
+        System.out.println("Enter a character with .next():");
+        char e = input.next().charAt(0); // This reads a single character
+
+        System.out.println("The user input Integer value is: " + a);
+        System.out.println("Float value is: " + b);
+        System.out.println("String is: " + userInput);
+        System.out.println("String with .next(): " + d);
+        System.out.println("Character with .next().charAt(0): " + e);
+
+        input.close(); // Close the scanner
+    }
+}
