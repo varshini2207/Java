@@ -1,0 +1,26 @@
+import java.util.Random;
+import java.util.Scanner;
+
+public class Coin{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
+        String userChoice = "yes";
+        System.out.println("Welcome to the Coin Toss Game!");
+        while(userChoice.equals("yes")) {
+            System.out.println("\nTossing the coin...");
+            int toss = random.nextInt(2);
+            if (toss == 0) {
+                System.out.println("Result: Head");
+            } else {
+                System.out.println("Result: Tail");
+            }
+
+            System.out.println("\nWould you like to toss again? Type 'yes' to continue");
+            userChoice = scanner.nextLine();
+        }
+
+        System.out.println("Thanks for playing the Coin Toss Game! Goodbye.");
+        scanner.close();
+    }
+}
