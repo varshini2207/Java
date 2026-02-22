@@ -1,0 +1,21 @@
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+class country{
+    public static void main(String[] args) {
+        HashMap<String, String> countryCapitalMap = new HashMap<>();
+        countryCapitalMap.put("USA", "Washington, D.C.");
+        countryCapitalMap.put("France", "Paris");
+        countryCapitalMap.put("Japan", "Tokyo");
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the name of a country to find its capital: ");
+        String country = scanner.nextLine();
+        String capital = countryCapitalMap.get(country);
+        if (capital != null) {
+            System.out.println("The capital of " + country + " is " + capital + ".");
+        } else {
+            System.out.println("Country not found in the map.");
+        }
+        scanner.close();
+    }
+}
