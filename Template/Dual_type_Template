@@ -1,0 +1,36 @@
+class dualtype<T1, T2> {
+    private T1 first;
+    private T2 second;
+
+    public dualtype(T1 first, T2 second) {
+        this.first = first;
+        this.second = second;
+    }
+
+    public T1 getFirst() {
+        return first;
+    }
+
+    public void setFirst(T1 first) {
+        this.first = first;
+    }
+
+    public T2 getSecond() {
+        return second;
+    }
+
+    public void setSecond(T2 second) {
+        this.second = second;
+    }
+
+    public static void main(String[] args) {
+        dualtype<Integer, String> dual_TypeInstance = new dualtype<>(123, "Hello, World!");
+        System.out.println("First Value (Integer): " + dual_TypeInstance.getFirst());
+        System.out.println("Second Value (String): " + dual_TypeInstance.getSecond());
+
+        dualtype<Double, Boolean> anotherInstance = new dualtype<>(45.67, true);
+        System.out.println("First Value (Double): " + anotherInstance.getFirst());
+        System.out.println("Second Value (Boolean): " + anotherInstance.getSecond());
+    }
+}
+
