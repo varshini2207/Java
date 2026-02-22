@@ -1,0 +1,60 @@
+interface animal
+{
+   abstract void sound();
+   abstract void eat();
+   abstract void sleep();
+}
+interface flyable
+{
+   abstract void fly();
+}
+class lion implements animal
+{
+   public void sound()
+   {
+      System.out.println("Lion:Animals make sound");
+   }
+   public void eat()
+   {
+      System.out.println("Lion: Animals do eat ");
+   }
+   public void sleep()
+   {
+      System.out.println("Lion:Animals do sleep");
+   }
+}
+class eagle implements animal
+{
+  public void sound()
+   {
+      System.out.println("eagle:Animals make sound");
+   }
+   public void eat()
+   {
+      System.out.println("eagle: Animals do eat ");
+   }
+   public void sleep()
+   {
+      System.out.println("eagle:Animals do sleep");
+   }
+}
+class sur
+{
+   public void fly()
+   {
+      System.out.println("Ainmals do fly");
+   }
+   public static void main(String args[])
+   {
+      lion l=new lion();
+      l.sound();
+      l.eat();
+      l.sleep();
+      eagle e=new eagle();
+      e.sound();
+      e.eat();
+      e.sleep();
+      sur f=new sur();
+      f.fly();
+   }
+}
