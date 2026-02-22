@@ -1,0 +1,20 @@
+package user;
+import Mathop.*;
+class Packsur
+{
+        public static void main(String main[])
+        {
+                int x;
+                int y;
+                int z;
+                int t;
+                calcu c= new calcu();
+                int a=20;
+                int b=5;
+                x=c.add(a,b);
+                y=c.sub(a,b);
+                z=c.multi(a,b);
+                t=c.div(a,b);
+                System.out.println("The addition of nos is"+x+"\n"+"The subraction of nos is"+y+"\n"+"The multiplycation of no is"+z+"\n"+"The division of nos is"+t);
+        }
+}
