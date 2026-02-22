@@ -1,0 +1,22 @@
+interface Mother
+{
+   abstract void care();
+   abstract void guide();
+}
+class Daughter implements Mother
+{
+   public void care()
+   {
+      System.out.println("Caring Mom:");
+   }
+   public void guide()
+   {
+      System.out.println("Guiding Mom");
+   }
+   public static void main(String [] args)
+   {
+      Daughter d=new Daughter();
+      d.care();
+      d.guide();
+   }
+}
