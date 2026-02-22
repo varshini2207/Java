@@ -1,0 +1,86 @@
+import java.util.Scanner;
+class Account {
+    protected int id;
+    protected String name;
+    protected int balance;
+    Scanner sc = new Scanner(System.in);
+    Account(int i, String n, int b) {
+        id = i;
+        name = n;
+        balance = b;
+    }
+    void deposit() {
+        System.out.println("Enter amount to deposit:");
+        int amount = sc.nextInt();
+        balance += amount;
+        System.out.println("New Balance: " + balance);
+    }
+    void withdraw() {
+        System.out.println("Enter amount to withdraw: ");
+        int amount = sc.nextInt();
+        if (balance >= amount) {
+            System.out.println("Withdrawn successfully.");
+            balance -= amount;
+        } else {
+            System.out.println("Insufficient balance.");
+        }
+    }
+    void displayBalance() {
+        System.out.println("Account ID: " + id + ", Name: " + name + ", Balance: " + balance);
+    }
+}
+class Savings extends Account {
+    int interestRate = 5;
+    Savings(int i, String n, int b) {
+        super(i,n,b);
+    }
+    void applyInterest() {
+        balance += (balance * interestRate) / 100;
+        System.out.println("Interest applied. New Balance: " + balance);
+    }
+}
+class Current extends Account {
+    int overdraftLimit = 500;
+    Current(int i, String n, int b) {
+         super(i,n,b);
+    }
+    void withdraw() {
+        System.out.println("Enter amount to withdraw: ");
+        int amount = sc.nextInt();
+        if (balance >= amount) {
+            balance -= amount;
+            System.out.println("Withdrawn successfully. New Balance: " + balance);
+        } else if ((balance + overdraftLimit) >= amount) {
+            int overdraftUsed = amount - balance;
+            balance = 0;
+            System.out.println("Withdrawn using overdraft. Overdraft used: " + overdraftUsed);
+        } else {
+            System.out.println("Exceeding overdraft limit.");
+        }
+    }
+}
+class Bank {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter account details (ID, Name, Balance): ");
+        int id = sc.nextInt();
+        String name = sc.next();
+        int balance = sc.nextInt();
+        Account ac=new Account(id,name,balance);
+        ac.deposit();
+        ac.withdraw();
+        System.out.println("1.Savings   2.Currect");
+        int choice = sc.nextInt();
+        if (choice == 1) {
+            Savings s = new Savings(id, name, balance);
+            s.displayBalance();
+            s.applyInterest();
+        } else if (choice == 2) {
+            Current c = new Current(id, name, balance);
+            c.displayBalance();
+            c.withdraw();
+        } else {
+            System.out.println("Invalid choice.");
+        }
+    }
+}
