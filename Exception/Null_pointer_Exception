@@ -1,0 +1,41 @@
+//import java.NullpointerException;
+/*class Null
+{
+   Null(String s)
+   {
+      super(s);
+   }
+}*/
+public class Ex4
+{
+ public static void find(String s)
+   {
+      if(s==null)
+      {
+         throw new NullPointerException("Expection thrown");
+      }
+      else
+      {
+         System.out.println("Length:"+s.length());
+      }
+   }
+   public static void main(String args[])
+   {
+      String s=null;
+      try
+      {
+         find(s);
+      }
+      catch(NullPointerException E)
+      {
+         System.out.println("Caught :"+E.getMessage());
+      }
+   }
+}
+/*class Nullexception
+{
+   Nullexception(String s)
+   {
+      super(s);
+   }
+}*/
