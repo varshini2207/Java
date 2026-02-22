@@ -1,0 +1,18 @@
+public class Multi
+{
+   public static void main(String args[])
+   {
+      Son s=new Son();
+      System.out.println(s.gender);
+      s.print();
+   }
+}
+class grandfather{}
+class father extends grandfather{}
+class son extends father
+{
+   char gender='m';
+   void print()
+   {
+      System.out.println("Parent class");
+   }}
