@@ -1,0 +1,45 @@
+import java.io.*;
+class userdefined extends Exception
+{
+   userdefined(String s)
+   {
+      super(s);
+   }
+}
+class IoException extends Exception
+{
+   IoException(String s1)
+   {
+      super(s1);
+   }
+}
+class IOuser
+{
+ static void check(int age) throws userdefined, IoException
+  {
+     if(age<18)
+     {
+        throw new userdefined("ageInvalid");
+     }
+     else
+     {
+        throw new IoException("I/O error");
+     }
+  }
+  public static void main(String args[])
+  {
+     try
+     {
+        check(16);
+     }
+     catch(userdefined e)
+      {
+       System.out.println("Caught Userdefined exception:"+e.getMessage());
+      }
+     catch(IoException e1)
+      {
+       System.out.println("Caught IO expection"+e1.getMessage());
+      }
+    }
+
+}
