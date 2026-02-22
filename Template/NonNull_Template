@@ -1,0 +1,23 @@
+import java.util.ArrayList;
+import java.util.List;
+public class nonnull {
+    public static <T> List<T> filterNonNull(List<T> inputList) {
+        List<T> nonNullList = new ArrayList<>();
+        for (T element : inputList) {
+            if (element != null) {
+                nonNullList.add(element);
+            }
+        }
+        return nonNullList;
+    }
+    public static void main(String[] args) {
+        List<String> stringList = new ArrayList<>();
+        stringList.add("Hello");
+        stringList.add(null);
+        stringList.add("World");
+        stringList.add(null);
+        stringList.add("Java");
+        List<String> filteredList = filterNonNull(stringList);
+        System.out.println("Filtered List (non-null elements): " + filteredList);
+    }
+}
