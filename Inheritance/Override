@@ -1,0 +1,32 @@
+class Override
+{
+   public static void main(String args[])
+      {
+        daughter d=new daughter();
+         System.out.println(d.gender);
+         d.print();
+      }
+}
+class gf
+{
+   char gender='m';
+   void print()
+   {
+      System.out.println("Parent class");
+   }
+}
+class mother extends grandfather
+{
+   char gender='f';
+   public void print()
+   {
+      System.out.println("mother class");
+   }
+}
+class daughter extends mother{
+   char gender='f';
+   public void print()
+   {
+      System.out.println("Daughter class");
+   }
+}
