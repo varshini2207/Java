@@ -1,0 +1,22 @@
+class main
+{
+   public void print(int a,int b)
+   {
+      int c=a+b;
+      System.out.println("addition:"+c);
+   }
+   public void print(double a,double b)
+   {
+      double c=a+b;
+      System.out.println("addition:"+c);
+   }
+}
+class Addition
+{
+   public static void main(String args[])
+   {
+      main m=new main();
+      m.print(10,15);
+      m.print(10.15,20.15);
+   }
+}
