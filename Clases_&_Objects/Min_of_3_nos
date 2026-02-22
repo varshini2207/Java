@@ -1,0 +1,38 @@
+class Check
+{
+    public static void min(int a,int b)
+    {
+        if(a<b)
+        {
+            System.out.println(a + " is less than " + b);
+        }
+        else
+        {
+           System.out.println(b + " is less than " + a);
+        }
+    }
+    public static void min(int a ,int b, int c)
+    {
+        if(a<b && a<c)
+        {
+           System.out.println(a + " is less than " + b + " and " + c);
+        }
+        else if(b<a && b<c)
+        {
+            System.out.println(b + " is less than " + a + " and " + c);
+        }
+        else
+        {
+            System.out.println(c + " is less than " + a + " and " + b);
+        }
+    }
+}
+class Main
+{
+    public static void main(String[] args)
+    {
+       Check obj=new Check();
+       obj.min(34,67);
+       obj.min(54,12,90);
+    }
+}
