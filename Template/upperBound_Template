@@ -1,0 +1,31 @@
+import java.util.ArrayList;
+import java.util.List;
+public class upperbound {
+    public static double sumOfNumbers(List<? extends Number> numbers) {
+        double sum = 0.0;
+        for (Number number : numbers) {
+            sum += number.doubleValue();
+        }
+        return sum;
+    }
+    public static void main(String[] args) {
+        List<Integer> integerList = new ArrayList<>();
+        integerList.add(1);
+        integerList.add(2);
+        integerList.add(3);
+
+        List<Double> doubleList = new ArrayList<>();
+        doubleList.add(1.5);
+        doubleList.add(2.5);
+        doubleList.add(3.5);
+
+        List<Float> floatList = new ArrayList<>();
+        floatList.add(1.0f);
+        floatList.add(2.0f);
+        floatList.add(3.0f);
+
+        System.out.println("Sum of Integer List: " + sumOfNumbers(integerList));
+        System.out.println("Sum of Double List: " + sumOfNumbers(doubleList));
+        System.out.println("Sum of Float List: " + sumOfNumbers(floatList));
+    }
+}
