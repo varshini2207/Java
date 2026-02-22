@@ -1,0 +1,19 @@
+import java.util.HashMap;
+import java.util.Map;
+class frequency {
+    public static void main(String[] args) {
+        int[] numbers = {50, 120, 15, 20, 22, 10, 50, 120, 15};
+        Map<Integer, Integer> frequencyMap = countFrequencies(numbers);
+        System.out.println("Frequency of each element:");
+        for (Integer key : frequencyMap.keySet()) {
+            System.out.println(key + ": " + frequencyMap.get(key));
+        }
+    }
+    public static Map<Integer, Integer> countFrequencies(int[] numbers) {
+        Map<Integer, Integer> frequencyMap = new HashMap<>();
+        for (int number : numbers) {
+            frequencyMap.put(number, frequencyMap.getOrDefault(number, 0) + 1);
+        }
+        return frequencyMap;
+    }
+}
