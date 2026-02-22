@@ -1,0 +1,26 @@
+ class Father
+   {
+      char gender='m';
+      void print()
+      {
+         System.out.println("Parent class");
+      }
+   }
+   class Son extends Father
+   {
+      char gender='m';
+         void print()
+         {
+            System.out.println("child class:");
+         }
+  }
+
+public class Single
+ {
+  public static void main(String args[])
+   {
+      Son s=new Son();
+      s.print();
+      System.out.println(s.gender);
+   }
+ }
