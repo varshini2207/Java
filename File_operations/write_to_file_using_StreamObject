@@ -1,0 +1,18 @@
+import java.io.*;
+
+   class swrite
+   {
+      public static void main(String args[]) throws IOException,FileNotFoundException
+      {
+
+         FileOutputStream fin=new FileOutputStream("oStream.txt");
+         String str="Stream is the sequence of data";
+         fin.write(str.getBytes());
+         fin.close();
+/*     catch(Exception e)
+      {
+         System.out.println(E);
+      }*/
+   }
+
+   }
