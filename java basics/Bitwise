@@ -1,0 +1,16 @@
+class Bitwise
+{
+  public static void main(String args[])
+  {
+     int x=42;
+     int y=15;
+     int a=x&y;
+     int b=x|y;
+     int c=x^y;
+
+      System.out.println("The Bitwise AND: "+a);
+      System.out.println("The Bitwise or: "+b);
+     System.out.println("The Bitwise XOR: "+c);
+      System.out.println("The Bitwise NOT: "+~x);
+  }
+}
