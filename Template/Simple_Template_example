@@ -1,0 +1,17 @@
+class display {
+    public static <T> void display(T data) {
+        if (data != null) {
+            System.out.println("Displaying data: " + data);
+            System.out.println("Data type: " + data.getClass().getName());
+        } else {
+            System.out.println("Displaying data: null");
+            System.out.println("Data type: null");
+        }
+    }
+    public static void main(String[] args) {
+        display(123);
+        display("Hello, World!");
+        display(45.67);
+        display(null);
+    }
+}
