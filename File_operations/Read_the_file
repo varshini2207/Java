@@ -1,0 +1,21 @@
+import java.io.*;
+import java.util.Scanner;
+import java.io.File;
+public class read{
+   public static void main(String args[]) throws IOException{
+         File f=new File("Sample.txt");
+         Scanner fetch=new Scanner(f);
+         while(fetch.hasNextLine())
+         {
+            System.out.println(fetch.nextLine());
+
+         }
+
+         fetch.close();
+/*      catch(Expection E)
+      {
+         System.out.println(E);
+      }*/
+
+}
+}
