@@ -1,0 +1,38 @@
+import java.util.Scanner;
+class SimpleCalculator
+{
+   public static void main(String[] args)
+   {
+      Scanner input = new Scanner(System.in);
+      System.out.println("Menu \n 1.Add \n 2.Subtract \n 3.Divsion \n 4.Multiplication");
+      System.out.println("Enter your choice:");
+      int ch=input.nextInt();
+      System.out.println("Enter the value for 'a':");
+      int a=input.nextInt();
+      System.out.println("Enter the value for 'b':");
+      int b=input.nextInt();
+      int c;
+      switch(ch)
+      {
+         case 1:
+            c=a+b;
+            System.out.println("Sum:"+c);
+            break;
+         case 2:
+            c=a-b;
+            System.out.println("Difference:"+c);
+            break;
+         case 3:
+            c=a/b;
+            System.out.println("Quotient:"+c);
+            break;
+         case 4:
+            c=a*b;
+            System.out.println("Product:"+c);
+            break;
+         default:
+            System.out.println("Invalid choice");
+            break;
+      }
+   }
+}
