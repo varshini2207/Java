@@ -1,0 +1,24 @@
+import java.io.File;
+import java.util.Scanner;
+
+public class Count {
+    public static void main(String[] args) {
+        int c = 0;
+
+        try {
+            File f = new File("sample.txt");
+            Scanner f1 = new Scanner(f);
+
+            while (f1.hasNextLine()) {
+                String l = f1.nextLine();
+                String[] arr = l.split(" ");
+                c += arr.length;
+            }
+
+            System.out.println("Total number of words: " + c);
+            f1.close();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+}
