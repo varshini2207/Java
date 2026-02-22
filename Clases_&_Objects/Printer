@@ -1,0 +1,22 @@
+class main
+{
+   public void print(int a,int b)
+   {
+      System.out.println("a is value:"+a);
+      System.out.println("b is value:"+b);
+   }
+   public void print(String a,String b)
+   {
+      System.out.println("a is string:"+a);
+      System.out.println("b is string:"+b);
+   }
+}
+class Printer
+{
+   public static void main(String args[])
+   {
+      main m=new main();
+      m.print(10,15);
+      m.print("java","dbms");
+   }
+}
