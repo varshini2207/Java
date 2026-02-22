@@ -1,0 +1,28 @@
+class userdefined extends Exception
+{
+   userdefined(String s)
+   {
+      super(s);
+   }
+}
+class Age
+{
+   public static void main(String args[])
+   {
+      try
+      {
+         check(16);
+      }
+      catch(userdefined E)
+      {
+         System.out.println(E.getMessage());
+      }
+   }
+   static void check(int age) throws userdefined
+   {
+      if(age<18)
+      {
+         throw new userdefined("Age Invalid");
+      }
+   }
+}
