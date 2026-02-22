@@ -1,0 +1,13 @@
+import java.util.*;
+class arraylist{
+   public static void main(String []args){
+      ArrayList<String>al=new ArrayList<>();
+      al.add("hai");
+      al.add("hello");
+      al.add("world");
+      Iterator <String>it=al.iterator();
+      while(it.hasNext()){
+         System.out.println(it.next());
+      }
+   }
+}
