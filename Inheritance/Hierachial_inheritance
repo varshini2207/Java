@@ -1,0 +1,36 @@
+public class Hier
+{
+   public static void main(String args[])
+   {
+      child1 ch1=new child1();
+      childb ch2=new childb();
+      System.out.println(ch1.gender);
+      System.out.println(ch2.gender);
+      ch1.print();
+      ch2.print();
+   }
+}
+class parent
+{
+   char gender='F';
+   void print()
+   {
+      System.out.println("Parent class");
+   }
+}
+class childb extends parent
+{
+   char gender='m';
+   void print()
+   {
+      System.out.println("Child 2 class");
+   }
+}
+class child1 extends parent
+{
+   char gender='f';
+   void print()
+   {
+      System.out.println("Child 1 class");
+   }
+}
