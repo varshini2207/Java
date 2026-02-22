@@ -1,0 +1,20 @@
+public class singletype<T> {
+    private T value;
+    public singletype(T value) {
+        this.value = value;
+    }
+    public T getValue() {
+        return value;
+    }
+    public void setValue(T value) {
+        this.value = value;
+    }
+    public static void main(String[] args) {
+        singletype<Integer> intBox = new singletype<>(123);
+        System.out.println("Integer SingleType Value: " + intBox.getValue());
+        singletype<String> strBox = new singletype<>("Hello, Generics!");
+        System.out.println("String SingleType Value: " + strBox.getValue());
+        singletype<Double> doubleBox = new singletype<>(45.67);
+        System.out.println("Double SingleType Value: " + doubleBox.getValue());
+    }
+}
