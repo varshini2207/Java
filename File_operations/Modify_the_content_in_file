@@ -1,0 +1,35 @@
+import java.io.File;
+import java.io.FileWriter;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        try {
+            // Create a file and write initial content
+            File f = new File("sampletxt.txt");
+            FileWriter fw = new FileWriter(f);
+            fw.write("This is a black colour");
+            fw.close();
+
+            // Read the content from the file and replace "dog" with "cat"
+            Scanner r = new Scanner(f);
+            String str = "";
+
+            while (r.hasNextLine()) {
+                String line = r.nextLine();
+                str += line.replace("black", "red") + "\n";
+            }
+            r.close();
+
+            // Write the modified content back to the file
+            FileWriter fw2 = new FileWriter(f); // Use FileWriter to write
+            fw2.write(str); // Write the modified content
+            fw2.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
